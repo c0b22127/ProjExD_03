@@ -200,13 +200,13 @@ def main():
         # Noneでない爆弾だけのリストを作る
         bombs = [bomb for bomb in bombs if bomb is not None]
         beams = [beam for beam in beams if beam is not None]
-
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
         for bomb in bombs:
             bomb.update(screen)
         for beam in beams:
             beam.update(screen)
+            
         score.update(screen)
         pg.display.update()
         tmr += 1
