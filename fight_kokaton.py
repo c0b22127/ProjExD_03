@@ -148,6 +148,9 @@ class Beam:
 
 
 class Score:
+    """
+    スコアを表示させるクラスの生成
+    """
     def __init__(self):
         self.font = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         self.color = (0, 0, 255)
@@ -206,7 +209,7 @@ def main():
             bomb.update(screen)
         for beam in beams:
             beam.update(screen)
-            
+
         score.update(screen)
         pg.display.update()
         tmr += 1
